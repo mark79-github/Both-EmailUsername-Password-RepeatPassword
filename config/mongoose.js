@@ -37,7 +37,7 @@ mongoose.connect(config.DB, dbConnectionOptions, (err, res) => {
     if (err) {
         console.warn(msg.DB_CONNECTION_ERROR, err);
     } else {
-        console.log(msg.DB_CONNECTED(res.connections[0].host, res.connections[0].name));
+        console.log(msg.DB_CONNECTED(res.connections[0].host, res.connections[0].name, config.PORT));
     }
 });
 
